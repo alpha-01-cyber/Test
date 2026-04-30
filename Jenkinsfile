@@ -1,5 +1,5 @@
 // This is the test file for Jenkins.
-flag=true
+def flag=true
 
 pipeline {
 	agent any
@@ -17,7 +17,7 @@ pipeline {
 			echo "Building.."
 			// Here you can define commands for your build
 				echo "Building version ${NEW_VERSION}"
-				bat "nvm install"
+				bat "nvm install latest"
 			}
 		}
 		stage("Test") {
