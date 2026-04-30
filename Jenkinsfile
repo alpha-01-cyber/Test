@@ -1,7 +1,13 @@
 // This is the test file for Jenkins.
 flag=true
+
 pipeline {
 	agent any
+	environment {
+		// variables here can be used by any stage
+		NEW_VERSION = '1.3.0'
+	}
+	
 	stages {
 		stage("Build") {
 			steps {
