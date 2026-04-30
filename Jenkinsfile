@@ -1,4 +1,5 @@
 // This is the test file for Jenkins.
+flag=true
 pipeline {
 	agent any
 	stages {
@@ -9,12 +10,12 @@ pipeline {
 			}
 		}
 		stage("Test") {
-			when {
+			steps {
+				when {
 				expression {
 					flag == false
 				}
 			}
-			steps {
 				echo "Testing.."
 			// Here you can define commands for your tests
 			}
