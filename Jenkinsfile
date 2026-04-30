@@ -27,7 +27,7 @@ pipeline {
 				// This action will happen regardless the output of the build
 				echo 'Post build condition running'
 			}
-			faliure {
+			failure {
 				// This action will occur only if the build is failed
 				echo 'Post action if Build failed'
 			}
